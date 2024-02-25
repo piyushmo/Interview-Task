@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Task-2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  
+  <body>
+    <h6>Project : Hosting Related Stuff Change</h6>
+<div class="container border 1px">
+    <form th:action="@{/register}" th:object="${user}" method="post">
+      <!-- 1nd row -->
+      <div class="container border 1px">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="Category">Category</label><br />
+            <!-- <select
+              id="Category"
+              class="m-2"
+              name="Category"
+              style="width: 60%"
+            >
+              <option value="Example2">General</option>
+              <option value="Example3">Example1</option>
+            </select> -->
+
+             <input type="text" name="category" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+          </div>
+
+          <div class="col-md-4">
+            <label for="Reproducibility">Reproducibility</label><br />
+            <input type="text" name="reproducibility" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+
+          </div>
+
+          <div class="col-md-4">
+            <label for="Complexity">Complexity</label><br />
+            <input type="text" name="complexity" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+
+          </div>
+        </div>
+      </div>
+      <!-- 2nd row -->
+      <div class="container border 1px; p-2">
+        <div class="row">
+          <div class="col-md-4">
+            <label>Assigned To</label> <br />
+            <input type="text" name="assignedTo" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+          
+            </div>
+          <div class="col-md-4">
+            <label>Status</label> <br />
+            <input type="text" name="status" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+
+          </div>
+
+          <div class="col-md-4">
+            <label>Priority</label> <br />
+            <input type="text" name="priority" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+
+          </div>
+        </div>
+        <!-- row div end -->
+      </div>
+      <!-- 2nd container div end -->
+
+      <!-- 3rd Div Start -->
+      <div class="container border 1px; p-2">
+        <div class="row">
+          <div class="col-md-4">
+            <label>Start Date</label> <br />
+            <input type="date" name="startDate" size="30%" />
+          </div>
+          <div class="col-md-4">
+            <label>End Date</label> <br />
+            <input type="date" name="endDate" size="30%" />
+          </div>
+
+          <div class="col-md-4">
+            <label>Type</label> <br />
+            <select
+              id="Complexity"
+              class="m-2"
+              name="type"
+              style="width: 60%"
+            >
+              <option>Feature</option>
+              <option value="Example2">Example2</option>
+              <option value="Example3">Example3</option>
+            </select>
+          </div>
+        </div>
+        <!-- row div end -->
+      </div>
+      <!-- 3rd container div end -->
+
+      <div class="container border 1px; p-2">
+        <div class="col-md-4">
+          <label>Title</label> <br/>
+          <input type="text" name="title" size="150%" />
+        </div>
+      </div>
+
+      <div class="container border 1px; p-2">
+        <div class="col-md-4">
+          <label>Description</label> <br />
+          <br />
+          <textarea rows="5" cols="153"  name="description" form="usrform"></textarea>
+        </div>
+      </div>
+
+      <div class="container border 1px; p-2" style="margin-left: 78%">
+        <button>Close</button>
+        <button class="btn btn-info">Submit</button>
+      </div>
+    </form>
+</div>   
+  </body>
+</html>
